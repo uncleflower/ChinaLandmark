@@ -13,7 +13,7 @@ struct LandmarkList: View {
     var body: some View {
         NavigationView {
             List(landmarks) { landmark in
-                NavigationLink(destination:Text("hello")) {
+                NavigationLink(destination:LandmarkDetail(landmark: landmark)) {
                     LandmarkCell(landmark: landmark)
                 }
             }

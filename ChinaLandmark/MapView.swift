@@ -12,6 +12,8 @@ import MapKit
 
 struct MapView: UIViewRepresentable {
     
+    let landmark:Landmark
+    
     let center = CLLocationCoordinate2D(
         latitude: 39.9087243,
         longitude: 116.3952859
@@ -26,7 +28,7 @@ struct MapView: UIViewRepresentable {
 
     func updateUIView(_ uiView: MKMapView, context: Context) {
         uiView.setRegion(
-            MKCoordinateRegion(center: center,
+            MKCoordinateRegion(center: landmark.locationCoordinate,
             span: span
         ),
             animated: true
@@ -37,6 +39,6 @@ struct MapView: UIViewRepresentable {
 
 struct MapView_Previews: PreviewProvider {
     static var previews: some View {
-        MapView()
+        MapView(landmark: landmarks[7])
     }
 }
