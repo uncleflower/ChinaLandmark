@@ -14,7 +14,6 @@ struct Landmark: Identifiable {
     var locationCoordinate: CLLocationCoordinate2D { CLLocationCoordinate2D(latitude: latitude, longitude: longitude) }
     
     var imageName: String
-    
     var isFavorite: Bool
     var isFeatured: Bool
 }

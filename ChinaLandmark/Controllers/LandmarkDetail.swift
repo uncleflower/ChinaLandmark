@@ -11,6 +11,12 @@ import SwiftUI
 struct LandmarkDetail: View {
     
     let landmark:Landmark
+    @EnvironmentObject var userData:UserData
+    
+    //已知landmark寻找landmark的index
+    var landmarkIndex: Int{
+        userData.userLandmarks.firstIndex(where: {$0.id == landmark.id})!
+    }
     
     var body: some View {
         
@@ -30,8 +36,26 @@ struct LandmarkDetail: View {
                 .padding(.bottom,-130)//offset和padding经常灵活使用
             
             VStack(alignment: .leading,spacing: 8) {
-                Text(landmark.name)
+                
+                
+                HStack {
+                    Text(landmark.name)
                         .font(.title)
+                    
+                    Button(action: {
+                        self.userData.userLandmarks[self.landmarkIndex].isFavorite.toggle()
+                    }){
+                        if userData.userLandmarks[landmarkIndex].isFavorite {
+                            Image(systemName: "star.fill")
+                                .foregroundColor(.yellow)
+                        }else{
+                            Image(systemName:"star")
+                            .foregroundColor(.gray)
+                        }
+                        
+                    }
+                    
+                }
                     HStack {
                         Text(landmark.city)
                             .font(.subheadline)
@@ -52,7 +76,8 @@ struct LandmarkDetail: View {
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView{
-            LandmarkDetail(landmark: landmarks[7])
+            LandmarkDetail(landmark: landmarks[0])
+            .environmentObject(UserData())
         }
     }
 }

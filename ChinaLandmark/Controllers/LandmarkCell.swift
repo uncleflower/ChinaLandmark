@@ -20,6 +20,10 @@ struct LandmarkCell: View {
             
             Text(landmark.name)
             Spacer()
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                .foregroundColor(.yellow)
+            }
         }
     }
 }
