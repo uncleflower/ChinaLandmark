@@ -8,9 +8,6 @@
 
 import SwiftUI
 
-extension String {
-    
-}
 
 struct LandmarkList: View {
     var body: some View {
