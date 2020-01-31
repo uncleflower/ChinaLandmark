@@ -9,7 +9,7 @@
 import SwiftUI
 import Combine
 
-//单个变量用@State一个数组用ObservableObje
+//单个变量用@State一个数组用ObservableObject
 final class UserData: ObservableObject  {
     //当数据变化时发送更新后的数据给视图，视图就会刷新
     @Published var userLandmarks = landmarks

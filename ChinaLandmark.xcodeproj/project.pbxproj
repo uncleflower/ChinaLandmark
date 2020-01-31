@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4016CD3E23E2C7E400E03F9A /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4016CD3D23E2C7E400E03F9A /* UserData.swift */; };
+		4091129323E40839001400F1 /* hikeData.json in Resources */ = {isa = PBXBuildFile; fileRef = 4091129223E40838001400F1 /* hikeData.json */; };
+		4091129623E4084B001400F1 /* HikeGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129423E4084B001400F1 /* HikeGraph.swift */; };
+		4091129723E4084B001400F1 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129523E4084B001400F1 /* GraphCapsule.swift */; };
+		4091129923E40858001400F1 /* Hike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129823E40858001400F1 /* Hike.swift */; };
+		4091129B23E4086F001400F1 /* HikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129A23E4086F001400F1 /* HikeView.swift */; };
 		40BF567423E1A746005F1CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF567323E1A746005F1CFE /* AppDelegate.swift */; };
 		40BF567623E1A746005F1CFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF567523E1A746005F1CFE /* SceneDelegate.swift */; };
 		40BF567A23E1A749005F1CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BF567923E1A749005F1CFE /* Assets.xcassets */; };
@@ -23,6 +28,11 @@
 
 /* Begin PBXFileReference section */
 		4016CD3D23E2C7E400E03F9A /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		4091129223E40838001400F1 /* hikeData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hikeData.json; sourceTree = "<group>"; };
+		4091129423E4084B001400F1 /* HikeGraph.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeGraph.swift; sourceTree = "<group>"; };
+		4091129523E4084B001400F1 /* GraphCapsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
+		4091129823E40858001400F1 /* Hike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hike.swift; sourceTree = "<group>"; };
+		4091129A23E4086F001400F1 /* HikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeView.swift; sourceTree = "<group>"; };
 		40BF567023E1A746005F1CFE /* ChinaLandmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinaLandmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BF567323E1A746005F1CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40BF567523E1A746005F1CFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +59,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4091128F23E4077C001400F1 /* Cell View */ = {
+			isa = PBXGroup;
+			children = (
+				40BF569A23E1C387005F1CFE /* LandmarkCell.swift */,
+			);
+			name = "Cell View";
+			sourceTree = "<group>";
+		};
+		4091129023E407DB001400F1 /* Supporting Views */ = {
+			isa = PBXGroup;
+			children = (
+				4091129523E4084B001400F1 /* GraphCapsule.swift */,
+				4091129423E4084B001400F1 /* HikeGraph.swift */,
+			);
+			path = "Supporting Views";
+			sourceTree = "<group>";
+		};
+		4091129123E407EE001400F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4091129223E40838001400F1 /* hikeData.json */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		40BF566723E1A746005F1CFE = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +104,7 @@
 		40BF567223E1A746005F1CFE /* ChinaLandmark */ = {
 			isa = PBXGroup;
 			children = (
+				4091128F23E4077C001400F1 /* Cell View */,
 				40BF569323E1C006005F1CFE /* Controllers */,
 				40BF568E23E1BD95005F1CFE /* UIViews */,
 				40BF568D23E1BD81005F1CFE /* Models */,
@@ -77,6 +113,8 @@
 				40BF567923E1A749005F1CFE /* Assets.xcassets */,
 				40BF567E23E1A749005F1CFE /* LaunchScreen.storyboard */,
 				40BF568123E1A749005F1CFE /* Info.plist */,
+				4091129123E407EE001400F1 /* Resources */,
+				4091129023E407DB001400F1 /* Supporting Views */,
 				40BF567B23E1A749005F1CFE /* Preview Content */,
 			);
 			path = ChinaLandmark;
@@ -93,8 +131,10 @@
 		40BF568D23E1BD81005F1CFE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4091129823E40858001400F1 /* Hike.swift */,
 				40BF568B23E1BD37005F1CFE /* Landmark.swift */,
 				4016CD3D23E2C7E400E03F9A /* UserData.swift */,
+				4091129A23E4086F001400F1 /* HikeView.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -112,7 +152,6 @@
 			children = (
 				40BF568723E1A800005F1CFE /* LandmarkDetail.swift */,
 				40BF569823E1C110005F1CFE /* LandmarkList.swift */,
-				40BF569A23E1C387005F1CFE /* LandmarkCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +218,7 @@
 				40BF568023E1A749005F1CFE /* LaunchScreen.storyboard in Resources */,
 				40BF567D23E1A749005F1CFE /* Preview Assets.xcassets in Resources */,
 				40BF567A23E1A749005F1CFE /* Assets.xcassets in Resources */,
+				4091129323E40839001400F1 /* hikeData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,8 +229,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4091129723E4084B001400F1 /* GraphCapsule.swift in Sources */,
+				4091129B23E4086F001400F1 /* HikeView.swift in Sources */,
 				40BF568823E1A800005F1CFE /* LandmarkDetail.swift in Sources */,
+				4091129623E4084B001400F1 /* HikeGraph.swift in Sources */,
 				40BF569923E1C110005F1CFE /* LandmarkList.swift in Sources */,
+				4091129923E40858001400F1 /* Hike.swift in Sources */,
 				4016CD3E23E2C7E400E03F9A /* UserData.swift in Sources */,
 				40BF568A23E1B23C005F1CFE /* MapView.swift in Sources */,
 				40BF567423E1A746005F1CFE /* AppDelegate.swift in Sources */,

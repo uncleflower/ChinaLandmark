@@ -40,13 +40,13 @@ struct LandmarkList: View {
 //                    }
                     
                     //推荐以下判断的方式：
-                    if !self.showFavoritesOnly || landmark.isFavorite{
-                                           NavigationLink(
-                                               destination: LandmarkDetail(landmark: landmark).environmentObject(self.userData)
-                                           ){
-                                               LandmarkCell(landmark: landmark)
-                                           }
-                                       }
+            if !self.showFavoritesOnly || landmark.isFavorite{
+                                   NavigationLink(
+                                       destination: LandmarkDetail(landmark: landmark).environmentObject(self.userData)
+                                   ){
+                                       LandmarkCell(landmark: landmark)
+                                   }
+                               }
                     
                     
                 }
