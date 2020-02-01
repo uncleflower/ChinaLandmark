@@ -13,6 +13,8 @@
 		4091129723E4084B001400F1 /* GraphCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129523E4084B001400F1 /* GraphCapsule.swift */; };
 		4091129923E40858001400F1 /* Hike.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129823E40858001400F1 /* Hike.swift */; };
 		4091129B23E4086F001400F1 /* HikeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129A23E4086F001400F1 /* HikeView.swift */; };
+		4091129D23E418AF001400F1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129C23E418AF001400F1 /* Home.swift */; };
+		4091129F23E43E2C001400F1 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4091129E23E43E2C001400F1 /* CategoryCell.swift */; };
 		40BF567423E1A746005F1CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF567323E1A746005F1CFE /* AppDelegate.swift */; };
 		40BF567623E1A746005F1CFE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40BF567523E1A746005F1CFE /* SceneDelegate.swift */; };
 		40BF567A23E1A749005F1CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 40BF567923E1A749005F1CFE /* Assets.xcassets */; };
@@ -33,6 +35,8 @@
 		4091129523E4084B001400F1 /* GraphCapsule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphCapsule.swift; sourceTree = "<group>"; };
 		4091129823E40858001400F1 /* Hike.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hike.swift; sourceTree = "<group>"; };
 		4091129A23E4086F001400F1 /* HikeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HikeView.swift; sourceTree = "<group>"; };
+		4091129C23E418AF001400F1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		4091129E23E43E2C001400F1 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		40BF567023E1A746005F1CFE /* ChinaLandmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChinaLandmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40BF567323E1A746005F1CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40BF567523E1A746005F1CFE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXGroup;
 			children = (
 				40BF569A23E1C387005F1CFE /* LandmarkCell.swift */,
+				4091129E23E43E2C001400F1 /* CategoryCell.swift */,
 			);
 			name = "Cell View";
 			sourceTree = "<group>";
@@ -104,10 +109,11 @@
 		40BF567223E1A746005F1CFE /* ChinaLandmark */ = {
 			isa = PBXGroup;
 			children = (
-				4091128F23E4077C001400F1 /* Cell View */,
-				40BF569323E1C006005F1CFE /* Controllers */,
-				40BF568E23E1BD95005F1CFE /* UIViews */,
 				40BF568D23E1BD81005F1CFE /* Models */,
+				4091128F23E4077C001400F1 /* Cell View */,
+				40BF568E23E1BD95005F1CFE /* UIViews */,
+				40BF569323E1C006005F1CFE /* Controllers */,
+				4091129C23E418AF001400F1 /* Home.swift */,
 				40BF567323E1A746005F1CFE /* AppDelegate.swift */,
 				40BF567523E1A746005F1CFE /* SceneDelegate.swift */,
 				40BF567923E1A749005F1CFE /* Assets.xcassets */,
@@ -232,9 +238,11 @@
 				4091129723E4084B001400F1 /* GraphCapsule.swift in Sources */,
 				4091129B23E4086F001400F1 /* HikeView.swift in Sources */,
 				40BF568823E1A800005F1CFE /* LandmarkDetail.swift in Sources */,
+				4091129F23E43E2C001400F1 /* CategoryCell.swift in Sources */,
 				4091129623E4084B001400F1 /* HikeGraph.swift in Sources */,
 				40BF569923E1C110005F1CFE /* LandmarkList.swift in Sources */,
 				4091129923E40858001400F1 /* Hike.swift in Sources */,
+				4091129D23E418AF001400F1 /* Home.swift in Sources */,
 				4016CD3E23E2C7E400E03F9A /* UserData.swift in Sources */,
 				40BF568A23E1B23C005F1CFE /* MapView.swift in Sources */,
 				40BF567423E1A746005F1CFE /* AppDelegate.swift in Sources */,
