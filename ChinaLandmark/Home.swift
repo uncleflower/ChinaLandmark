@@ -18,6 +18,8 @@ struct Home: View {
             by: {$0.category}
         )
     }
+    
+    @State var showingProfile = false
     var body: some View {
         NavigationView {
             List {
@@ -41,15 +43,29 @@ struct Home: View {
                 }
             }
             .navigationBarTitle(Text("精选"))
+                //添加一个navigationBarItem填充一个按钮，并且完成sheet
+            .navigationBarItems(trailing:
+                Button(action:{self.showingProfile.toggle()}) {
+                    Image(systemName: "person.crop.circle")
+                        .font(.largeTitle)
+                        .padding()
+                    }
+                )
+                .sheet(isPresented: $showingProfile) {
+                    Profile()
+            }
         }
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        //        NavigationView{
-        Home()
-        //        }
+        //调试的时候可以展示dark模式和放大的辅助器
+            Group {
+                Home()
+                Home().environment(\.colorScheme, .dark)
+                Home().environment(\.sizeCategory, .accessibilityExtraLarge)
+            }
     }
 }
 
