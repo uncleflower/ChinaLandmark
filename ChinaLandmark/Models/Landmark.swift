@@ -32,3 +32,4 @@ let landmarks = [
 ]
 
 let featuredLandmarks = landmarks.filter{ $0.isFeatured }
+//4:循环，找出isFeatured为true的元素全部放到featuredLandmarks里面

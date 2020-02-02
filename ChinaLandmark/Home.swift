@@ -23,11 +23,14 @@ struct Home: View {
     var body: some View {
         NavigationView {
             List {
-                Image(landmarks[0].imageName)
-                    .resizable()
-                    .scaledToFill()//填充方法
+//                Image(landmarks[0].imageName)
+//                    .resizable()
+//                    .scaledToFill()//填充方法
+//                    .frame(height: 200)
+//                    .clipped()//裁剪
+                PageVC()
                     .frame(height: 200)
-                    .clipped()//裁剪
+
                 
                 ForEach(categories.keys.sorted(),id: \.self) {
                     categoryName in
